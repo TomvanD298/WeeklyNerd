@@ -1,0 +1,150 @@
+@font-face {
+  font-family: Altroned;
+  src: url(./assets/fonts/altroned-trial/ALTRONED\ Trial.otf);
+}
+
+@font-face {
+  font-family: Monoton;
+  src: url(./assets/fonts/Monoton/Monoton-Regular.ttf);
+}
+
+:root {
+  --primary-color: #3bd26c;
+  --secundary-color: #1a2b33;
+  --background-color: #0b2e40;
+  --text-white: #ffffff;
+
+  --neon-Blue: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff,
+    0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+  --neon-Purple: 0 0 5px #fff, 0 0 10px #a0f, 0 0 20px #a0f, 0 0 40px #a0f,
+    0 0 80px #a0f, 0 0 100px #a0f, 0 0 150px #a0f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Altroned, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-white);
+  overflow-x: hidden;
+}
+
+header {
+  width: 80dvw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto 0 auto;
+
+  p {
+    width: 80%;
+    text-align: start;
+  }
+
+  img {
+    width: 10%;
+    margin: 0 2rem;
+  }
+
+  img:first-of-type {
+    transform: scaleX(-1);
+  }
+
+  hr {
+    border: 1px solid white;
+    box-shadow: var(--neon-Blue);
+    width: 50%;
+  }
+
+  > span:first-of-type {
+    display: flex;
+    align-items: center;
+    height: 3px;
+    color: var(--text-white);
+    font-family: "Monoton", cursive;
+    font-size: 4em;
+    text-shadow: var(--neon-Blue);
+    font-weight: 400;
+    line-height: 2em;
+    letter-spacing: 8px;
+
+    hr {
+      width: 100px;
+    }
+  }
+
+  #bottomLine {
+    margin-top: -1em;
+    width: 37rem;
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 37rem;
+
+    p {
+      font-size: 0.8em;
+      width: 100%;
+    }
+
+    p:last-of-type {
+      grid-area: 1 / 2 / 2 / 3;
+      text-align: end;
+    }
+  }
+}
+
+h1 {
+  text-align: center;
+  font-family: "Monoton", cursive;
+  font-size: 4em;
+  text-shadow: var(--neon-Blue);
+  font-weight: 400;
+  line-height: 2em;
+  letter-spacing: 8px;
+}
+
+.flicker-slow {
+  animation: flicker 3s linear infinite;
+}
+
+.flicker-fast {
+  animation: flicker 1s linear infinite;
+}
+
+@keyframes flicker {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    opacity: 0.99;
+  }
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.4;
+  }
+}
+
+main {
+  width: 80dvw;
+}
