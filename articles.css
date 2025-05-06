@@ -1,0 +1,64 @@
+main h1 {
+  text-align: start;
+  font-size: 2em;
+  text-shadow: none;
+  letter-spacing: 2px;
+  font-family: Altroned;
+}
+
+img {
+  max-height: 200px;
+  width: auto;
+  border-radius: 8px;
+}
+
+.hackatonvideo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  video {
+    width: 50dvw;
+    border-radius: 8px;
+  }
+
+  h2 {
+    margin: 0 0 1em 0;
+  }
+}
+
+h2 {
+  font-size: 2em;
+  margin: 3em 0 1em 0;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin: 2em 0 1em 0;
+}
+
+a {
+  color: aqua;
+}
+
+pre {
+  background: #222;
+  width: fit-content;
+  padding: 2em;
+  margin: 1em 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+  border-left: 4px solid #ccc;
+}
+
+code {
+  font-family: Consolas, Monaco, monospace;
+  font-size: 0.95em;
+}
+blockquote {
+  font-style: italic;
+  margin: 1em 0 3em 0;
+  padding-left: 1em;
+  border-left: 4px solid #ddd;
+  color: white;
+}

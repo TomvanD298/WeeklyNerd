@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Weekly Nerd | Gsap</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../articles.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/index.html">
+        <span>
+          <hr />
+          The
+          <hr />
+        </span>
+
+        <h1>
+          We<span class="flicker-slow">e</span>kly Ne<span class="flicker-fast"
+            >r</span
+          >d
+        </h1>
+
+        <hr id="bottomLine" />
+
+        <div>
+          <p>Year 3</p>
+          <p>1 Bitcoin</p>
+          <p>Amsterdam 2025</p>
+        </div>
+      </a>
+    </header>
+    <main>
+      <canvas id="fireflyCanvas"></canvas>
+      <img src="/assets/images/gsap.jpg" alt="" />
+      <h1>
+        Beyond Tweening - <a href="https://gsap.com" target="_blank">GSAP</a>
+      </h1>
+      <p><em>Cassie Evans</em> - <strong>07-03-25</strong></p>
+
+      <br /><br />
+      <p>
+        GSAP is een library voor allemaal animaties en leuke dingen. Ook wel
+        <em>Animation toolbox</em> genoemd.
+      </p>
+
+      <p>
+        Het kan in het begin een beetje intimiderend zijn, maar is ontzettend
+        leuk en makkelijk te gebruiken als je het eenmaal onder de knie hebt.
+      </p>
+
+      <p>
+        Je kan heel makkelijk animeren. Door dingen achter elkaar te zetten,
+        wordt het automatisch in een goeie timeline gezet. Zij focussen zich op
+        de saaie wiskunde erachter en wij kunnen lekker spelen met animaties.
+      </p>
+
+      <h2>Utils</h2>
+      <ul>
+        <li>
+          <code>utils.random()</code> zorgt ervoor dat de nummers worden
+          gerandomized. → Dingen randomize op een element kan natuurlijker
+          aanvoelen.
+        </li>
+        <li>
+          <code>utils.mapRange()</code> is een goeie manier de grootte van het
+          scherm te mappen voor animaties.
+        </li>
+        <li>
+          <code>utils.wrap()</code> kan je heel makkelijk dingen loopen door het
+          scherm als een <code>&lt;marquee&gt;</code>.
+        </li>
+        <li>
+          <code>utils.pipe()</code> om dingen goed te snappen en dingen vast te
+          zetten?
+        </li>
+      </ul>
+
+      <h2>Let the ease do the work</h2>
+      <p>
+        Ease visualiser om dingen helemaal te customizen en te animeren in CSS.
+      </p>
+      <ul>
+        <li><code>rough</code> ease → voor bijvoorbeeld bliksem.</li>
+        <li>
+          <code>yoyo</code> zorgt ervoor dat het heen en weer gaat met de
+          animatie.
+        </li>
+      </ul>
+
+      <h2>Useful stuff</h2>
+      <ul>
+        <li>
+          <code>matchMedia()</code> → GSAP’s versie van media queries. Hiermee
+          kan je ook bijvoorbeeld schermgrootte, rotatie of reduceMotion mee
+          aansturen.
+        </li>
+        <li>
+          <code>control methods</code> → Je kan het net als een soort video op
+          pauze zetten of doorspoelen.
+        </li>
+      </ul>
+
+      <h2>Helper Functions</h2>
+      <p>
+        Als er veel mensen tegen een probleem aanlopen (en het niet zware code
+        is), voegen zij het toe aan de library zoals bijvoorbeeld:
+      </p>
+      <ul>
+        <li>Carousel</li>
+        <li>Horizontal scroll → container animation</li>
+        <li>MotionPathHelper</li>
+      </ul>
+    </main>
+    <script src="../fireflies.js"></script>
+  </body>
+</html>

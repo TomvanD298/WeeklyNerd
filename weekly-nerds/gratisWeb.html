@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Weekly Nerd | Web Monetization</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../articles.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/index.html">
+        <span>
+          <hr />
+          The
+          <hr />
+        </span>
+
+        <h1>
+          We<span class="flicker-slow">e</span>kly Ne<span class="flicker-fast"
+            >r</span
+          >d
+        </h1>
+
+        <hr id="bottomLine" />
+
+        <div>
+          <p>Year 3</p>
+          <p>1 Bitcoin</p>
+          <p>Amsterdam 2025</p>
+        </div>
+      </a>
+    </header>
+    <main>
+      <canvas id="fireflyCanvas"></canvas>
+      <img src="/assets/images/wm-logo--animated.svg" alt="" />
+      <h1>Pay the Web Forward with web Monetization</h1>
+      <p><em>Peter-Paul Koch</em> - <strong>26-02-25</strong></p>
+
+      <h2>Waarom zouden websites gratis moeten zijn?</h2>
+      <p>
+        Advertenties zijn eigenlijk een soort schaamte voor mensen zodat ze niet
+        hoeven te betalen voor het gebruik van websites. Dit komt omdat mensen
+        eigenlijk er niet voor willen betalen, en niemand weet waarom. Het is
+        een slechte gewoonte en dit moeten we afleren???
+      </p>
+      <p>
+        Als je veel geld wilt verdienen moet je een hype creëren. De meeste
+        Hypes zijn dingen die trendy zijn op dit moment.
+      </p>
+      <p>AI is nu een trend, over 3 jaar is <em>Slubdiewub</em> dat.</p>
+
+      <h3>Wat willen we?</h3>
+      <p><em>“Je moet betalen of anders”</em></p>
+      <p>
+        Dit hoeft natuurlijk niet. Maar het zou beter werken als je een
+        collectebus had. Bijvoorbeeld 5 cent per bezoek van een website.
+      </p>
+      <p>
+        Dit geldt natuurlijk voor websites met blogs, nieuws etc., niet bij
+        webshops.
+      </p>
+      <p>
+        Hoe leuker je de website vindt, hoe meer je betaalt — dit kan je meten
+        door tijd.
+      </p>
+
+      <h3>Web Monetization</h3>
+      <p>
+        Dit kan worden opgelost door <strong>Web Monetization</strong>.
+        Bijvoorbeeld je hebt 10 euro, en elke keer als je op de website komt
+        spendeer je 5 cent.
+      </p>
+
+      <h2>Hoe gaat dit gebeuren?</h2>
+      <p>Hoe kan je met web monetization betalen?</p>
+      <ul>
+        <li><strong>Wallet</strong> — zoals een bankrekening.</li>
+        <li>
+          <strong>Een browser extension</strong> — voor Chrome, Firefox of
+          Safari.
+        </li>
+        <li>
+          <strong>Een waarde</strong> — wat je wilt uitgeven aan websites.
+        </li>
+      </ul>
+      <p>
+        Het grote probleem is de wallet. Want bij het maken van een bankrekening
+        moet je jezelf legitimeren met o.a. je paspoort en adres. Dit is
+        allemaal omdat er zo verschrikkelijk veel regels omheen zijn. Dit zit
+        verschrikkelijk dichtgetimmerd en gaat heel traag.
+      </p>
+
+      <h3>Support - Monetization Stream</h3>
+      <p>
+        Binnen de extensie vul je je eigen wallet key in. Ook kan je hier een
+        limiet instellen van hoeveel je wilt uitgeven.
+      </p>
+      <p>Dit kan je op je website invullen met:</p>
+      <pre><code>&lt;link rel="monetization" href="..."&gt;</code></pre>
+      <p>zodat je zelf geld kan verdienen met je website.</p>
+      <p>
+        Elke keer als een betaling wordt gedaan krijg je hier een melding van
+        d.m.v. een <code>EventListener</code>. Zo kan je dit monitoren. Zo kan
+        je beslissen of je bijvoorbeeld ads uitzet voor deze gebruiker.
+      </p>
+    </main>
+    <script src="../fireflies.js"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Weekly Nerd | IDEA11Y</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../articles.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/index.html">
+        <span>
+          <hr />
+          The
+          <hr />
+        </span>
+
+        <h1>
+          We<span class="flicker-slow">e</span>kly Ne<span class="flicker-fast"
+            >r</span
+          >d
+        </h1>
+
+        <hr id="bottomLine" />
+
+        <div>
+          <p>Year 3</p>
+          <p>1 Bitcoin</p>
+          <p>Amsterdam 2025</p>
+        </div>
+      </a>
+    </header>
+
+    <main>
+      <canvas id="fireflyCanvas"></canvas>
+      <img src="../assets/images/IDEA11Y.png" alt="IDEA11Y" />
+      <h1>IDEA11Y</h1>
+
+      <p><strong>Meetup – English track</strong></p>
+
+      <h2>Inclusive Design and Accessibility</h2>
+
+      <h2>Practical Fixes for Common WCAG Failures</h2>
+      <p>
+        Presented by
+        <a href="https://www.erikkroes.nl/" target="_blank">Erik Kroes</a>
+      </p>
+      <p><strong>WCAG</strong> - Web Content Accessibility Guidelines</p>
+
+      <h3>1. Keyboard</h3>
+      <p>
+        Pressing the <code>Tab</code> key should take you to every interactive
+        element on your site. <code>Shift + Tab</code> should move focus in the
+        reverse direction.
+      </p>
+
+      <p>Common issues include:</p>
+      <ul>
+        <li>No skip link for quickly jumping to main content</li>
+        <li>Uncontrolled or invisible focus states</li>
+        <li>
+          Improper use of elements like
+          <code>&lt;div role="button"&gt;</code> without correct keyboard
+          behavior
+        </li>
+      </ul>
+
+      <h3>2. Contrast</h3>
+      <p>
+        Even in bright environments (like in the sun), poor contrast affects
+        everyone. This is not just about accessibility, but also about
+        usability.
+      </p>
+
+      <p>
+        Modern browsers now include built-in contrast tools. You no longer need
+        external apps. The contrast ratio should be at least
+        <strong>3:1</strong> for larger text, and ideally
+        <strong>4.5:1</strong> for body text.
+      </p>
+
+      <p>Frequent problems include:</p>
+      <ul>
+        <li>Low-contrast <strong>placeholders</strong> in form fields</li>
+        <li>Inaccessible <strong>branding colors</strong></li>
+        <li>
+          Poorly styled <strong>states</strong> like hover, active, or disabled
+        </li>
+      </ul>
+
+      <h3>3. Alternatives</h3>
+      <p>
+        Always provide <strong>alt text</strong> for images, meaningful labels
+        for icons and form fields, and transcripts for audio/video. This ensures
+        content is usable with screen readers and accessible technologies.
+      </p>
+
+      <h3>4. & Sizing</h3>
+      <p>
+        Allow users to resize text and layouts. Avoid fixed pixel sizes. Use
+        relative units like <code>em</code>, <code>rem</code>, or percentages to
+        ensure responsive, accessible layouts.
+      </p>
+
+      <h2>Things Outside of the Accessibility Box</h2>
+      <p><strong>Nienke de Keijzer</strong></p>
+      <p>
+        I missd this because of an emergency with a friend. He was having a
+        panic attack and I had to help him.
+      </p>
+    </main>
+
+    <footer></footer>
+    <script src="../fireflies.js"></script>
+  </body>
+</html>

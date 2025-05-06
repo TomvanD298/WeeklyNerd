@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Weekly Nerd</title>
+    <!-- <link rel="stylesheet" href="background.css" /> -->
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../articles.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/index.html">
+        <span>
+          <hr />
+          The
+          <hr />
+        </span>
+
+        <h1>
+          We<span class="flicker-slow">e</span>kly Ne<span class="flicker-fast"
+            >r</span
+          >d
+        </h1>
+
+        <hr id="bottomLine" />
+
+        <div>
+          <p>Year 3</p>
+          <p>1 Bitcoin</p>
+          <p>Amsterdam 2025</p>
+        </div>
+      </a>
+    </header>
+
+    <main>
+      <canvas id="fireflyCanvas"></canvas>
+      <img src="../assets/images/least power.png" alt="Least power" />
+      <h1>I ❤️ &lt;JSX /&gt;</h1>
+
+      <blockquote>
+        “Choose the least powerful language suitable for a given purpose”
+      </blockquote>
+
+      <section>
+        <h3>Demo 1 - Custom switches</h3>
+        <p>
+          <strong>Label</strong> - Een label weet dat de input erbij hoort, dus
+          de tekst is ook klikbaar.
+        </p>
+
+        <pre><code class="language-css">input {
+  appearance: none;
+}</code></pre>
+
+        <p>zorgt ervoor dat je het item overschrijft en zelf kan style.</p>
+
+        <pre><code class="language-css">input:focus {
+  //no
+  outline: none;
+  //yes
+  outline-color: transparant;
+}
+
+input:focus-visable {
+}</code></pre>
+
+        <p>
+          De eerste is er altijd, de tweede is er alleen als je toetsenbord
+          gebruikt.
+        </p>
+
+        <p><strong>Vervanging van een colorpicker:</strong></p>
+
+        <pre><code class="language-html">&lt;input type="color"&gt;</code></pre>
+      </section>
+
+      <section>
+        <h3>Demo 2 - In-page transitions</h3>
+
+        <pre><code class="language-css">html {
+  scroll-behavior: smooth;
+}</code></pre>
+        <p>
+          Zorgt ervoor dat als de pagina auto scrolled, kan de browser het
+          automatisch scrollen.
+        </p>
+
+        <pre><code class="language-css">@media (prefers-reduced-motion: no-preference) {
+  /* animaties zijn ok */
+}</code></pre>
+        <p>
+          Niet iedereen vindt dit fijn, dus dit is code om het te checken of
+          iemand dit aangegeven heeft.
+        </p>
+
+        <pre><code class="language-css">#myItem {
+  scroll-margin-top: 100px;
+}</code></pre>
+        <p>
+          Zorgt ervoor dat er wat meer ruimte is om te scrollen zonder dat er
+          dingen over elkaar heen gaan liggen.
+        </p>
+
+        <pre><code class="language-css">#my-target {
+  outline: 10px solid red;
+  transition: 1s ease-in-out outline;
+}</code></pre>
+        <p>Legt een focus op het element.</p>
+      </section>
+
+      <section>
+        <h3>Demo 3 - Accordion and Dialogs</h3>
+
+        <pre><code class="language-html">&lt;details open&gt;
+  &lt;summary&gt;Here is my title&lt;/summary&gt;
+  &lt;p&gt;Here is my paragraph&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+        <p>
+          <code>open</code> is een live attribute, dit doet de browser voor ons.
+        </p>
+
+        <pre><code class="language-css">summary::marker {
+  font-size: 1.5em;
+  content: '📭';
+}
+
+details[open] summary::marker {
+  /* custom styles here */
+}</code></pre>
+        <p>
+          Ook dit kan je stylen. Zorg met een hover dat je laat zien aan de
+          gebruiker dat een element interactief is.
+        </p>
+
+        <p>
+          <code>&lt;alert&gt;</code> is doodoo 💩, dit is de enige en niet nette
+          manier om een pop-up/bericht te laten zien.
+        </p>
+        <p>Gebruik <code>&lt;dialog&gt;</code> — dit is veel beter.</p>
+
+        <pre><code class="language-html">&lt;dialog&gt;
+  &lt;form method="dialog"&gt;
+    &lt;h1&gt;Dit is een pop-up&lt;/h1&gt;
+    &lt;button&gt;Close&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/dialog&gt;</code></pre>
+
+        <p>
+          <code>&lt;dialog&gt;</code> is onderdeel van de Top Layer. De
+          <code>z-index</code> wordt hierdoor overbodig. De backdrop zit er al
+          bij, je kan het kleuren met transparantie.
+        </p>
+
+        <pre><code class="language-css">@starting-style {
+  opacity: 0;
+  transform: scale(0.8);
+}</code></pre>
+        <p>
+          <code>@starting-style</code> animeert dingen die er nog niet zijn.
+          Voorheen konden browsers alleen dingen animeren die al op de pagina
+          zijn.
+        </p>
+      </section>
+
+      <section>
+        <h3>Demo 4 - The Parent Selector</h3>
+        <p>
+          <code>:has</code> is tegenwoordig heel makkelijk en is een goede
+          vervanger van veel JS dingen.
+        </p>
+      </section>
+
+      <section>
+        <h3>CSS in the Future</h3>
+
+        <pre><code class="language-css">input, textarea {
+  field-sizing: content;
+}</code></pre>
+        <p>Text box schaalt op basis van de inhoud.</p>
+
+        <p>
+          <strong>Select option</strong> → is er nog niet, maar dit zorgt ervoor
+          dat je je dropdown kan customizen.
+        </p>
+
+        <p>
+          <strong>Scroll Driven Animations:</strong><br />
+          Je kan met CSS dingen maken in plaats van JS, dit is een stuk sneller
+          en beter voor je browser.<br />
+          <a href="http://scroll-driven-animations.style" target="_blank"
+            >scroll-driven-animations.style</a
+          >
+        </p>
+      </section>
+    </main>
+    <script src="../fireflies.js"></script>
+  </body>
+</html>
