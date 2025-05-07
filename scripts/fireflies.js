@@ -54,8 +54,8 @@ class Firefly {
 
   draw(ctx) {
     const glow = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius * 6);
-    glow.addColorStop(0, `rgba(255, 255, 150, ${this.alpha})`);
-    glow.addColorStop(1, `rgba(255, 255, 150, 0)`);
+    glow.addColorStop(0, `rgba(0, 255, 255, ${this.alpha})`);
+    glow.addColorStop(1, `rgba(0, 255, 255, 0)`);
     ctx.fillStyle = glow;
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius * 6, 0, Math.PI * 2);
@@ -63,7 +63,7 @@ class Firefly {
   }
 }
 
-const fireflies = Array.from({ length: 10 }, () => new Firefly());
+const fireflies = Array.from({ length: 100 }, () => new Firefly());
 
 function animate() {
   ctx.clearRect(0, 0, width, height);

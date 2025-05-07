@@ -57,7 +57,7 @@ header {
     z-index: 9;
 
     /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.34);
+    background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.1px);
     -webkit-backdrop-filter: blur(5.1px);
@@ -74,9 +74,10 @@ header {
       height: 100%;
     }
     a {
-      width: 100%;
+      max-width: 100px;
       margin: 0;
-      padding: 2em;
+      padding: 2em 0;
+      font-family: Altroned;
     }
 
     span {
@@ -95,7 +96,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 8rem auto 0 auto;
+    margin: 9em auto 0 auto;
     z-index: 20;
   }
 
@@ -169,7 +170,7 @@ header a.site-logo.shrink {
   transform: scale(0.3);
   z-index: 10;
 
-  margin: -9em auto 0 auto;
+  margin: -8em auto 0 auto;
 
   div {
     display: none;
@@ -249,6 +250,7 @@ main {
   gap: 5%;
   align-items: flex-start;
   justify-content: space-evenly;
+  scroll-margin-top: 200px;
 
   a {
     text-decoration: none;
@@ -327,8 +329,10 @@ main {
     position: absolute;
     z-index: 3;
     height: 128px;
-    top: 2.8em;
-    left: 4.2em;
+    /* top: 2.8em;
+    left: 4.2em; */
+    margin-left: 8.9em;
+    margin-top: 2.7em;
     animation: RockArm 2s ease-in-out infinite alternate;
     transform-origin: center bottom;
     animation-delay: -1s;
@@ -358,6 +362,7 @@ main {
   height: 100%;
   position: relative;
   align-items: flex-start;
+  scroll-margin-top: 200px;
 
   a {
     text-decoration: none;
@@ -415,6 +420,7 @@ main hr {
   justify-content: space-evenly;
   align-items: flex-start;
   width: 100%;
+  scroll-margin-top: 200px;
 
   hr {
     height: 200px;
@@ -465,6 +471,7 @@ article {
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 1em;
+  scroll-margin-top: 200px;
 }
 
 .phone {
@@ -476,4 +483,45 @@ article {
 .website {
   width: 100%;
   aspect-ratio: 16 / 9;
+  border-radius: 4px;
+}
+
+/* /////////////////////////////////////////////////////// */
+/* ///////////////////// Reflectie /////////////////////// */
+/* /////////////////////////////////////////////////////// */
+
+#reflectie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1em;
+
+  scroll-margin-top: 200px;
+
+  article {
+    width: 49%;
+    background-color: rgba(0, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 1em;
+  }
+
+  article:hover {
+    transform: translateY(2px);
+    box-shadow: #0ff 2px 5px 10px;
+  }
+
+  .leerdoel {
+    width: 100%;
+  }
+
+  h2 {
+    width: 100%;
+    font-size: 2em;
+    margin: 0 0 1em 0;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    margin: 0 0 1em 0;
+  }
 }

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const logo = document.querySelector(".site-logo");
   
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 10) {
+      if (window.scrollY > 1) {
         logo.classList.add("shrink");
       } else {
         logo.classList.remove("shrink");
