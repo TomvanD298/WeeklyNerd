@@ -48,7 +48,7 @@ pre {
   margin: 1em 1em;
   border-radius: 8px;
   overflow-x: auto;
-  border-left: 4px solid #ccc;
+  border-left: 4px solid var(--secundary-color);
 }
 
 code {

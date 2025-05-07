@@ -10,3 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+  document.addEventListener("DOMContentLoaded", () => {
+    const logo = document.querySelector(".site-logo");
+  
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 10) {
+        logo.classList.add("shrink");
+      } else {
+        logo.classList.remove("shrink");
+      }
+    });
+  });

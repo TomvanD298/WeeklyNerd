@@ -8,7 +8,25 @@
   </head>
   <body>
     <header>
-      <a href="/index.html">
+      <nav>
+        <ul>
+          <li>
+            <a href="#hackathon">Hackaton</a>
+          </li>
+          <li>
+            <a href="#weeklyNerds">Weekly Nerds</a>
+          </li>
+          <span></span>
+          <li>
+            <a href="#projecten">Projecten</a>
+          </li>
+          <li>
+            <a href="#reflectie">Reflectie</a>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="/index.html" class="site-logo">
         <span>
           <hr />
           The
@@ -37,30 +55,62 @@
         <p id="dateDisplay"></p>
       </section>
 
-      <section class="hackathon">
-        <a href="./hackaton.html">
-          <h2>Hackaton</h2>
-          <span></span>
-          <!-- <img src="./assets/images/Hackaton.png" alt="Hackaton" /> -->
-          <video src="./assets/video/hackaton.mp4" autoplay muted loop></video>
-        </a>
+      <h2>Over mij</h2>
+      <section id="overMij">
+        <div class="aboutImage">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="#0ff"
+              d="M50.2,-59.4C64,-48.2,73.4,-31.4,72.7,-15.7C72.1,0,61.4,14.6,52.6,30.8C43.8,47,36.9,64.8,23.2,74.3C9.6,83.8,-10.9,85,-25.7,76.9C-40.5,68.8,-49.6,51.3,-59.6,34.3C-69.7,17.2,-80.8,0.5,-77.8,-13.2C-74.8,-26.9,-57.7,-37.7,-42.4,-48.6C-27.1,-59.5,-13.5,-70.6,2.3,-73.4C18.2,-76.1,36.4,-70.6,50.2,-59.4Z"
+              transform="translate(100 100)"
+            />
+          </svg>
+
+          <div class="cartoonTom">
+            <img
+              src="./assets/images/Tom-zonder-arm.png"
+              alt="Tom als een cartoon"
+            />
+            <img
+              src="./assets/images/Tom-zonder-arm2.png"
+              alt="Tom als een cartoon"
+            />
+          </div>
+        </div>
+
+        <p>
+          Hoi, ik ben Tom van Droffelaar, een gepassioneerde webdeveloper in het
+          derde jaar van de studie Communicatie en Multimedia Design aan de
+          Hogeschool van Amsterdam. <br />
+          PORTFOLIO →
+        </p>
 
         <div>
-          <h2>Gesprek</h2>
+          <h2>Nieuw Binnen</h2>
           <ol>
             <li>
               <p>1.</p>
-              <a href="#">Je plannen </a>
+              <a href="#overMij">Over mij </a>
               <p>&gt;</p>
             </li>
             <li>
               <p>2.</p>
-              <a href="#">Je leerdoelen </a>
+              <a href="#hackathon">Hackaton </a>
               <p>&gt;</p>
             </li>
             <li>
               <p>3.</p>
-              <a href="#">Je reflectie en vervolg </a>
+              <a href="#weeklyNerds">weekly-nerds </a>
+              <p>&gt;</p>
+            </li>
+            <li>
+              <p>4.</p>
+              <a href="#projecten">Projecten </a>
+              <p>&gt;</p>
+            </li>
+            <li>
+              <p>5.</p>
+              <a href="#reflectie">Reflectie </a>
               <p>&gt;</p>
             </li>
           </ol>
@@ -69,15 +119,22 @@
 
       <hr />
 
-      <section class="weeklyNerds">
-        <!-- <article>
-          <a href="#">
-            <h2>Comming soon...</h2>
-            <h3>[Datum] | [Naam]]</h3>
-            <img src="" alt="" />
-          </a>
-        </article> -->
-        <!-- <hr /> -->
+      <h2>Hackaton</h2>
+      <section id="hackathon">
+        <!-- <a href="https://tomvand298.github.io/Hackaton/" target="_blank"> -->
+        <!-- <img src="./assets/images/Hackaton.png" alt="Hackaton" /> -->
+        <!-- <video src="./assets/video/hackaton.mp4" autoplay muted loop></video> -->
+        <iframe
+          src="https://tomvand298.github.io/Hackaton/"
+          style="border: none"
+          title="HCD"
+        ></iframe>
+      </section>
+
+      <hr />
+
+      <h2>Weekly Nerds</h2>
+      <section id="weeklyNerds">
         <article>
           <a href="./weekly-nerds/IDEA11Y.html">
             <h2>IDEA11Y</h2>
@@ -85,7 +142,7 @@
             <img src="./assets/images/IDEA11Y.png" alt="" />
           </a>
         </article>
-        <!-- <hr /> -->
+
         <article>
           <a href="./weekly-nerds/projectFuga.html">
             <h2>Geld verdienen met Project Fuga</h2>
@@ -93,7 +150,7 @@
             <img src="./assets/images/Fuga.png" alt="" />
           </a>
         </article>
-        <!-- <hr /> -->
+
         <article>
           <a href="./weekly-nerds/circuitBending.html">
             <h2>Circuit Bending</h2>
@@ -109,7 +166,6 @@
             <img src="./assets/images/DeclarativeDesign.jpg" alt="" />
           </a>
         </article>
-        <!-- <hr /> -->
         <article>
           <a href="./weekly-nerds/gsap.html">
             <h2>Beyond Tweening - GSAP</h2>
@@ -117,7 +173,6 @@
             <img src="./assets/images/gsap.jpg" alt="" />
           </a>
         </article>
-        <!-- <hr /> -->
         <article>
           <a href="./weekly-nerds/gratisWeb.html">
             <h2>Pay the Web Forward with web Monetization</h2>
@@ -133,6 +188,51 @@
           </a>
         </article>
       </section>
+
+      <hr />
+
+      <h2>Projecten</h2>
+      <section id="projecten">
+        <iframe
+          class="phone"
+          src="https://bierweer.onrender.com/"
+          style="border: none"
+          title="Bierweer"
+        ></iframe>
+
+        <iframe
+          class="phone"
+          src="https://tomvand298.github.io/WEB-HCD-24-25/"
+          style="border: none"
+          title="HCD"
+        ></iframe>
+
+        <iframe
+          class="website"
+          src="https://tomvand298.github.io/BrowserTechForm/"
+          style="border: none"
+          title="HCD"
+        ></iframe>
+
+        <iframe
+          class="website"
+          src="https://tomvand298.github.io/BackToTheFuture/"
+          style="border: none"
+          title="HCD"
+        ></iframe>
+
+        <iframe
+          class="website"
+          src="https://tomvand298.github.io/WAFS/"
+          style="border: none"
+          title="HCD"
+        ></iframe>
+      </section>
+
+      <hr />
+
+      <h2>Reflectie</h2>
+      <section id="reflectie"></section>
     </main>
 
     <footer></footer>
