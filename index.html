@@ -26,7 +26,7 @@
         </ul>
       </nav>
 
-      <a href="/index.html" class="site-logo">
+      <a href="./index.html" class="site-logo">
         <span>
           <hr />
           The
@@ -121,14 +121,13 @@
 
       <h2>Hackaton</h2>
       <section id="hackathon">
-        <!-- <a href="https://tomvand298.github.io/Hackaton/" target="_blank"> -->
-        <!-- <img src="./assets/images/Hackaton.png" alt="Hackaton" /> -->
-        <!-- <video src="./assets/video/hackaton.mp4" autoplay muted loop></video> -->
-        <iframe
-          src="https://tomvand298.github.io/Hackaton/"
-          style="border: none"
-          title="HCD"
-        ></iframe>
+        <img
+          src="./assets/images/Hackaton.png"
+          class="popover-trigger"
+          data-type="desktop"
+          data-url="https://tomvand298.github.io/Hackaton/"
+          alt="Bierweer"
+        />
       </section>
 
       <hr />
@@ -209,40 +208,52 @@
 
       <h2>Projecten</h2>
       <section id="projecten">
-        <iframe
-          class="phone"
-          src="https://bierweer.onrender.com/"
-          style="border: none"
-          title="Bierweer"
-        ></iframe>
+        <img
+          src="./assets/images/Bierweer.png"
+          class="popover-trigger"
+          data-type="phone"
+          data-url="https://bierweer.onrender.com/"
+          alt="Bierweer"
+        />
 
-        <iframe
-          class="phone"
-          src="https://tomvand298.github.io/WEB-HCD-24-25/"
-          style="border: none"
-          title="HCD"
-        ></iframe>
+        <img
+          src="./assets/images/HCD.png"
+          class="popover-trigger"
+          data-type="phone"
+          data-url="https://tomvand298.github.io/WEB-HCD-24-25/"
+          alt="HCD"
+        />
 
-        <iframe
-          class="website"
-          src="https://tomvand298.github.io/BrowserTechForm/"
-          style="border: none"
-          title="HCD"
-        ></iframe>
+        <img
+          src="./assets/images/BT.png"
+          class="popover-trigger"
+          data-type="desktop"
+          data-url="https://tomvand298.github.io/BrowserTechForm/"
+          alt="BrowserTechForm"
+        />
 
-        <iframe
-          class="website"
-          src="https://tomvand298.github.io/BackToTheFuture/"
-          style="border: none"
-          title="HCD"
-        ></iframe>
+        <img
+          src="./assets/images/backtothefuture.png"
+          class="popover-trigger"
+          data-type="desktop"
+          data-url="https://tomvand298.github.io/BackToTheFuture/"
+          alt="CSS"
+        />
 
-        <iframe
-          class="website"
-          src="https://tomvand298.github.io/WAFS/"
-          style="border: none"
-          title="HCD"
-        ></iframe>
+        <img
+          src="./assets/images/WAFS.png"
+          class="popover-trigger"
+          data-type="desktop"
+          data-url="https://tomvand298.github.io/WAFS/"
+          alt="WAFS"
+        />
+
+        <div class="overlay" id="overlay"></div>
+
+        <div class="popover" id="popover">
+          <button class="close-btn" onclick="closePopover()">✕</button>
+          <iframe id="popoverIframe" style="border: none" src=""></iframe>
+        </div>
       </section>
 
       <hr />
@@ -287,37 +298,36 @@
         <h2>Leerdoelen Meesterproef</h2>
 
         <article class="leerdoel">
-          <h3>1. Leren loslaten</h3>
+          <h3>1. Leren loslaten en vertrouwen op teamgenoten</h3>
           <p>
-            Ik merk bij mezelf dat ik aan het begin van een project snel geneigd
-            ben om de leiding te nemen. Wanneer ik niet direct de leiding heb en
-            er gaat vervolgens iets mis, voel ik meteen de drang om in te
-            grijpen en het zelf op te lossen<br />Daarom wil ik als leerdoel
-            stellen dat ik beter leer loslaten en meer vertrouwen krijg in mijn
-            teamgenoten.
+            Vanaf het begin van het volgende project zal ik bij minimaal drie
+            situaties waarin ik normaal gesproken de leiding zou nemen, bewust
+            de regie aan een teamgenoot overlaten. Na afloop reflecteer ik samen
+            met mijn team op het resultaat om mijn vertrouwen in hun aanpak te
+            versterken. Ik evalueer mijn vooruitgang wekelijks in mijn logboek
+            gedurende de looptijd van het project (5 weken).
           </p>
         </article>
         <article class="leerdoel">
-          <h3>2. Feedback vragen</h3>
+          <h3>2.Vaker hulp en feedback vragen bij vormgeving</h3>
           <p>
-            Mijn volgende leerdoel is om vaker hulp en feedback van anderen te
-            vragen bij het vormgeven. Ik heb namelijk de neiging om mijzelf af
-            te sluiten wanneer ik ergens aan werk, waardoor mijn ontwerpen soms
-            van mindere kwaliteit zijn. Door mezelf open te stellen en meer
-            samen te werken hoop ik mijn vormgevingsvaardigheden verder te
-            verbeteren.
+            Tijdens de komende 5 weken vraag ik bij elk ontwerpproces minimaal
+            twee keer actief om feedback van medestudenten, bijvoorbeeld tijdens
+            feedbackrondes of via Teams. Ik documenteer deze momenten en de
+            ontvangen input, en bespreek tijdens de eindbespreking hoe dit mijn
+            ontwerpresultaat heeft beïnvloed.
           </p>
         </article>
         <article class="leerdoel">
-          <h3>3. Experimenteren</h3>
+          <h3>3. Consistente en gestructureerde documentatie bijhouden</h3>
           <p>
-            Een ander leerdoel dat ik voor mezelf wil stellen, is om vaker te
-            experimenteren en niet bang te zijn om fouten te maken. Ik merk dat
-            ik soms te voorzichtig ben in wat ik maak, omdat ik wil dat het
-            meteen goed is. Maar juist door te proberen, fouten te maken en
-            daarvan te leren, word ik creatiever en leer ik sneller. Met dit
-            leerdoel wil ik mezelf uitdagen om nieuwe dingen te proberen, ook
-            als ik nog niet precies weet hoe het moet.
+            De komende 5 weken zal ik wekelijks op vrijdagmiddag één uur
+            inplannen om mijn voortgang, keuzes en leerpunten te documenteren in
+            mijn Productbiografie. Ik gebruik hiervoor een vaste structuur: wat
+            ik gedaan heb, waarom ik bepaalde keuzes maakte, wat goed ging en
+            wat beter kon. Aan het einde van het project evalueer ik of ik dit
+            elke week heb bijgehouden en hoe het mijn inzicht in mijn proces
+            heeft verbeterd.
           </p>
         </article>
       </section>

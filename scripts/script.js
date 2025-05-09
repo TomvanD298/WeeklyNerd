@@ -21,3 +21,38 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+/* /////////////////////////////////////////////////////// */
+/* ///////////////////// Pop-Over //////////////////////// */
+/* /////////////////////////////////////////////////////// */
+
+
+
+  const triggers = document.querySelectorAll('.popover-trigger');
+    const popover = document.getElementById('popover');
+    const iframe = document.getElementById('popoverIframe');
+    const overlay = document.getElementById('overlay');
+
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const type = trigger.getAttribute('data-type');
+        const url = trigger.getAttribute('data-url');
+
+        // Update popover class and content
+        popover.classList.remove('phone', 'desktop');
+        popover.classList.add(type);
+        iframe.src = url;
+
+        // Show popover
+        popover.style.display = 'block';
+        overlay.style.display = 'block';
+      });
+    });
+
+    function closePopover() {
+      popover.style.display = 'none';
+      overlay.style.display = 'none';
+      iframe.src = ''; // Stop loading when closed
+    }
+
+    overlay.addEventListener('click', closePopover);
