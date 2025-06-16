@@ -8,24 +8,6 @@
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li>
-            <a href="#hackathon">Hackaton</a>
-          </li>
-          <li>
-            <a href="#weeklyNerds">Weekly Nerds</a>
-          </li>
-          <span></span>
-          <li>
-            <a href="#projecten">Projecten</a>
-          </li>
-          <li>
-            <a href="#reflectie">Leerdoelen & Reflectie</a>
-          </li>
-        </ul>
-      </nav>
-
       <a href="./index.html" class="site-logo">
         <span>
           <hr />
@@ -47,10 +29,23 @@
           <p>Amsterdam 2025</p>
         </div>
       </a>
+
+      <button id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="navMenu">
+        <ul>
+          <li><a href="#overMij">Over mij →</a></li>
+          <li><a href="#weeklyNerds">Weekly Nerds →</a></li>
+          <li><a href="#projecten">Projecten →</a></li>
+          <li><a href="#reflectie">Leerdoelen & Reflectie →</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-      <canvas id="fireflyCanvas"></canvas>
+      <canvas id="neonShapesCanvas"></canvas>
       <section class="date">
         <p id="dateDisplay"></p>
       </section>
@@ -79,39 +74,29 @@
         </div>
 
         <p>
-          Hoi, ik ben Tom van Droffelaar, een gepassioneerde webdeveloper in het
-          derde jaar van de studie Communicatie en Multimedia Design aan de
-          Hogeschool van Amsterdam. <br /><br />
-          <a href="#">PORTFOLIO →</a>
+          Hoi! ik ben Tom, een gepassioneerde webdeveloper in het derde jaar van
+          de studie CMD aan de Hogeschool van Amsterdam. <br /><br />
+          Dit is een overzicht van mijn minor WEB, waarin ik mijn vaardigheden
+          verder ontwikkel en mijn passie voor web deel. Hier vind je mijn
+          projecten, reflecties en de wekelijkse nerds die mij inspireren.
+          <br /><br />
+          <a href="https://tom.droffelaar.nl/" target="_blank">Portfolio →</a>
         </p>
 
         <div>
           <h2>Nieuw Binnen</h2>
           <ol>
             <li>
-              <p>1.</p>
-              <a href="#overMij">Over mij </a>
-              <p>&gt;</p>
+              <a href="#overMij">Over mij → </a>
             </li>
             <li>
-              <p>2.</p>
-              <a href="#hackathon">Hackaton </a>
-              <p>&gt;</p>
+              <a href="#weeklyNerds">weekly-nerds → </a>
             </li>
             <li>
-              <p>3.</p>
-              <a href="#weeklyNerds">weekly-nerds </a>
-              <p>&gt;</p>
+              <a href="#projecten">Projecten → </a>
             </li>
             <li>
-              <p>4.</p>
-              <a href="#projecten">Projecten </a>
-              <p>&gt;</p>
-            </li>
-            <li>
-              <p>5.</p>
-              <a href="#reflectie">Leerdoelen & Reflectie</a>
-              <p>&gt;</p>
+              <a href="#reflectie">Leerdoelen & Reflectie →</a>
             </li>
           </ol>
         </div>
@@ -119,89 +104,13 @@
 
       <hr />
 
-      <h2>Hackaton</h2>
-      <section id="hackathon">
-        <img
-          src="./assets/images/Hackaton.png"
-          class="popover-trigger"
-          data-type="desktop"
-          data-url="https://tomvand298.github.io/Hackaton/"
-          alt="Bierweer"
-        />
-      </section>
-
-      <hr />
-
       <h2>Weekly Nerds</h2>
       <section id="weeklyNerds">
-        <article>
-          <a href="./weekly-nerds/IDEA11Y.html">
-            <h2>IDEA11Y</h2>
-            <h3>7 Maart | Meetup - English track</h3>
-            <img src="./assets/images/IDEA11Y.png" alt="" />
-          </a>
-        </article>
-
-        <article>
-          <a href="./weekly-nerds/projectFuga.html">
-            <h2>Geld verdienen met Project Fuga</h2>
-            <h3>9 April | Niels Leenheer</h3>
-            <img src="./assets/images/Fuga.png" alt="" />
-          </a>
-        </article>
-
-        <article>
-          <a href="./weekly-nerds/circuitBending.html">
-            <h2>Circuit Bending</h2>
-            <h3>3 April | Rosa Schuurmans</h3>
-            <img src="./assets/images/Bending.jpg" alt="" />
-          </a>
-        </article>
-
-        <article>
-          <a href="./weekly-nerds/declarativeDesign.html">
-            <h2>Declarative Design</h2>
-            <h3>12 Maart | Jeremy Keith</h3>
-            <img src="./assets/images/DeclarativeDesign.jpg" alt="" />
-          </a>
-        </article>
-        <article>
-          <a href="./weekly-nerds/gsap.html">
-            <h2>Beyond Tweening - GSAP</h2>
-            <h3>7 Maart | Cassie Evans</h3>
-            <img src="./assets/images/gsap.png" alt="" />
-          </a>
-        </article>
-        <article>
-          <a href="./weekly-nerds/gratisWeb.html">
-            <h2>Pay the Web Forward with web Monetization</h2>
-            <h3>26 Februari | Peter-Paul Koch</h3>
-            <img src="./assets/images/wm-logo--animated.svg" alt="" />
-          </a>
-        </article>
-        <article>
-          <a href="./weekly-nerds/stopUsingHTML.html">
-            <h2>Stop using JS for that</h2>
-            <h3>5 Februari | Kilian Valkhof</h3>
-            <img src="./assets/images/stopJS.jpg" alt="" />
-          </a>
-        </article>
-
-        <article>
-          <a href="#">
-            <h2>CSS karakter animatie</h2>
-            <h3>Gast Spreker | Julia Miocene</h3>
-            <img src="./assets/images/css-karakter.png" alt="" />
-          </a>
-        </article>
-
-        <article>
-          <a href="#">
-            <h2>9ELEMENTS</h2>
-            <h3>Gast Spreker/Docent | Nils Binder</h3>
-            <img src="./assets/images/9Elements.png" alt="" />
-          </a>
-        </article>
+        <div class="overlay" id="nerdOverlay"></div>
+        <div class="popover desktop" id="nerdPopover">
+          <button class="close-btn" onclick="closeNerdPopover()">✕</button>
+          <div id="nerdContent"></div>
+        </div>
       </section>
 
       <hr />
@@ -209,7 +118,15 @@
       <h2>Projecten</h2>
       <section id="projecten">
         <img
-          src="./assets/images/Bierweer.png"
+          src="./assets/images/Projecten/Meesterproef.png"
+          class="popover-trigger"
+          data-type="desktop"
+          data-url="https://demanmetdecode-production.up.railway.app/"
+          alt="Hackaton"
+        />
+
+        <img
+          src="./assets/images/Projecten/Bierweer.png"
           class="popover-trigger"
           data-type="phone"
           data-url="https://bierweer.onrender.com/"
@@ -217,7 +134,7 @@
         />
 
         <img
-          src="./assets/images/HCD.png"
+          src="./assets/images/Projecten/HCD.png"
           class="popover-trigger"
           data-type="phone"
           data-url="https://tomvand298.github.io/WEB-HCD-24-25/"
@@ -225,7 +142,15 @@
         />
 
         <img
-          src="./assets/images/BT.png"
+          src="./assets/images/Projecten/Hackaton.png"
+          class="popover-trigger"
+          data-type="desktop"
+          data-url="https://tomvand298.github.io/Hackaton/"
+          alt="Bierweer"
+        />
+
+        <img
+          src="./assets/images/Projecten/BT.png"
           class="popover-trigger"
           data-type="desktop"
           data-url="https://tomvand298.github.io/BrowserTechForm/"
@@ -233,7 +158,7 @@
         />
 
         <img
-          src="./assets/images/backtothefuture.png"
+          src="./assets/images/Projecten/backtothefuture.png"
           class="popover-trigger"
           data-type="desktop"
           data-url="https://tomvand298.github.io/BackToTheFuture/"
@@ -241,7 +166,7 @@
         />
 
         <img
-          src="./assets/images/WAFS.png"
+          src="./assets/images/Projecten/WAFS.png"
           class="popover-trigger"
           data-type="desktop"
           data-url="https://tomvand298.github.io/WAFS/"
@@ -258,8 +183,44 @@
 
       <hr />
 
-      <h2>Reflectie</h2>
+      <h2>Leerdoelen en Reflectie</h2>
       <section id="reflectie">
+        <article class="leerdoel">
+          <h3>1. Leren loslaten en vertrouwen op teamgenoten</h3>
+          <p>
+            Vanaf het begin van het volgende project zal ik bij minimaal drie
+            situaties waarin ik normaal gesproken de leiding zou nemen, bewust
+            de regie aan een teamgenoot overlaten. Na afloop reflecteer ik samen
+            met mijn team op het resultaat om mijn vertrouwen in hun aanpak te
+            versterken. Ik evalueer mijn vooruitgang wekelijks in mijn logboek
+            gedurende de looptijd van het project (5 weken).
+          </p>
+        </article>
+        <article class="leerdoel">
+          <h3>2. Vaker hulp en feedback vragen bij vormgeving</h3>
+          <p>
+            Tijdens de komende 5 weken vraag ik bij elk ontwerpproces minimaal
+            twee keer actief om feedback van medestudenten, bijvoorbeeld tijdens
+            feedbackrondes of via Teams. Ik documenteer deze momenten en de
+            ontvangen input, en bespreek tijdens de eindbespreking hoe dit mijn
+            ontwerpresultaat heeft beïnvloed.
+          </p>
+        </article>
+        <article class="leerdoel">
+          <h3>3. Consistente en gestructureerde documentatie bijhouden</h3>
+          <p>
+            De komende 5 weken zal ik wekelijks op vrijdagmiddag één uur
+            inplannen om mijn voortgang, keuzes en leerpunten te documenteren in
+            mijn Productbiografie. Ik gebruik hiervoor een vaste structuur: wat
+            ik gedaan heb, waarom ik bepaalde keuzes maakte, wat goed ging en
+            wat beter kon. Aan het einde van het project evalueer ik of ik dit
+            elke week heb bijgehouden en hoe het mijn inzicht in mijn proces
+            heeft verbeterd.
+          </p>
+        </article>
+
+        <h2>Reflectie</h2>
+
         <article>
           <h3>Weekly Nerd sprekers</h3>
           <p>
@@ -283,7 +244,7 @@
           </p>
         </article>
         <article>
-          <h3>Hoe gaat het?</h3>
+          <h3>Hoe gaat het? (Tussengesprek)</h3>
           <p>
             De minor verloopt tot nu toe erg soepel. Ik haal veel plezier uit
             het bouwen van verschillende projecten en merk dat ik mezelf goed
@@ -294,40 +255,35 @@
             iedereen.
           </p>
         </article>
-
-        <h2>Leerdoelen Meesterproef</h2>
-
-        <article class="leerdoel">
-          <h3>1. Leren loslaten en vertrouwen op teamgenoten</h3>
+        <article>
+          <h3>De Meesterproef</h3>
           <p>
-            Vanaf het begin van het volgende project zal ik bij minimaal drie
-            situaties waarin ik normaal gesproken de leiding zou nemen, bewust
-            de regie aan een teamgenoot overlaten. Na afloop reflecteer ik samen
-            met mijn team op het resultaat om mijn vertrouwen in hun aanpak te
-            versterken. Ik evalueer mijn vooruitgang wekelijks in mijn logboek
-            gedurende de looptijd van het project (5 weken).
+            De Meesterproef was een geweldige ervaring. We hebben als team echt
+            een prachtig resultaat neergezet in vijf weken. Het was een hele
+            leuke opdracht met een geweldige werkgever. Met in het begin wat
+            kleine tweaks aan het design, konden we al snel aan de slag met de
+            website.Ik heb veel gekke dingen gemaakt en veel geleerd over code
+            en teamsverband.
+            <br />
+            Met wat kleine hobbels in het team hebben we iets moois neergezet,
+            iets waar we echt heel trots op mogen zijn.
           </p>
         </article>
         <article class="leerdoel">
-          <h3>2.Vaker hulp en feedback vragen bij vormgeving</h3>
-          <p>
-            Tijdens de komende 5 weken vraag ik bij elk ontwerpproces minimaal
-            twee keer actief om feedback van medestudenten, bijvoorbeeld tijdens
-            feedbackrondes of via Teams. Ik documenteer deze momenten en de
-            ontvangen input, en bespreek tijdens de eindbespreking hoe dit mijn
-            ontwerpresultaat heeft beïnvloed.
-          </p>
+          <h3>Leerdoelen</h3>
+          <p>1.</p>
+          <p>2.</p>
+          <p>3.</p>
         </article>
-        <article class="leerdoel">
-          <h3>3. Consistente en gestructureerde documentatie bijhouden</h3>
+        <article>
+          <h3>Dat was het dan</h3>
           <p>
-            De komende 5 weken zal ik wekelijks op vrijdagmiddag één uur
-            inplannen om mijn voortgang, keuzes en leerpunten te documenteren in
-            mijn Productbiografie. Ik gebruik hiervoor een vaste structuur: wat
-            ik gedaan heb, waarom ik bepaalde keuzes maakte, wat goed ging en
-            wat beter kon. Aan het einde van het project evalueer ik of ik dit
-            elke week heb bijgehouden en hoe het mijn inzicht in mijn proces
-            heeft verbeterd.
+            Wauw.. Wat een bijzondere maanden zijn dit geweest. Ik heb veel
+            geleerd, zowel over mezelf als over de mogelijkheden van het web. De
+            minor heeft mij ontzettend veel nieuwe dingen geleerd, en ik ben erg
+            trots op de projecten die ik heb gemaakt. Bedankt Sanne, Vasilis,
+            Cyd, Declan en Krijn voor de geweldige minor en de inspirerende
+            sprekers.
           </p>
         </article>
       </section>
@@ -336,6 +292,6 @@
     <footer></footer>
 
     <script src="./scripts/script.js"></script>
-    <script src="./scripts/fireflies.js"></script>
+    <script src="./scripts/neonShapes.js"></script>
   </body>
 </html>

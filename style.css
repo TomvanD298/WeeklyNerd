@@ -8,20 +8,29 @@
   src: url(./assets/fonts/Monoton/Monoton-Regular.ttf);
 }
 
+@font-face {
+  font-family: Delight;
+  src: url(./assets/fonts/Delight/Web-TT/Delight-Medium.ttf);
+}
+
 :root {
   --primary-color: #3bd26c;
   --secundary-color: #0ff;
-  --background-color: #0b2e40;
+  --background-color: #222;
   --text-white: #ffffff;
 
   --neon-Blue: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff,
     0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
   --neon-Purple: 0 0 5px #fff, 0 0 10px #a0f, 0 0 20px #a0f, 0 0 40px #a0f,
     0 0 80px #a0f, 0 0 100px #a0f, 0 0 150px #a0f;
+
+  --border-radius-small: 4px;
 }
 
 html {
   scroll-behavior: smooth;
+
+  scrollbar-color: var(--secundary-color) #222;
 }
 
 * {
@@ -31,10 +40,11 @@ html {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(180deg, #00416a 0%, #212733 100%);
+  font-family: Delight, Helvetica, sans-serif;
+  background-color: var(--background-color);
   color: var(--text-white);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 canvas {
@@ -43,48 +53,108 @@ canvas {
   left: 0;
   display: block;
   z-index: -1;
+  filter: blur(3px);
 }
 
+main hr {
+  border: 1px solid white;
+  box-shadow: var(--neon-Blue);
+  width: 70%;
+  margin: 6em auto;
+}
+
+p {
+  font-weight: 100;
+}
 /* /////////////////////////////////////////////////////// */
 /* /////////////////////// Header //////////////////////// */
 /* /////////////////////////////////////////////////////// */
 
+#hamburger {
+  position: fixed;
+  top: 3rem;
+  left: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0;
+}
+
+#hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--secundary-color);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+/* Transform to 'X' */
+#hamburger.active span:nth-child(1) {
+  transform: translateY(1.35em) rotate(45deg);
+  background-color: red;
+}
+
+#hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger.active span:nth-child(3) {
+  transform: translateY(-1.35em) rotate(-45deg);
+  background-color: red;
+}
+
+/* Nav menu */
+#navMenu {
+  width: fit-content;
+  position: fixed;
+  top: 6.5rem;
+  left: 3rem;
+  background: #111;
+  border-radius: var(--border-radius-small);
+  padding: 3rem 2rem;
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+#navMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#navMenu li {
+  margin: 2rem 0;
+}
+
+#navMenu a {
+  all: unset;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+#navMenu a:hover {
+  text-decoration: underline;
+}
+
+#navMenu.active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
 header {
-  nav {
-    position: fixed;
-    top: 0;
-    width: 100dvw;
-    z-index: 9;
-
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.1px);
-    -webkit-backdrop-filter: blur(5.1px);
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-
-    ul {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      height: 100%;
-    }
-    a {
-      max-width: 100px;
-      margin: 0;
-      padding: 2em 0;
-      font-family: Altroned;
-    }
-
-    span {
-      width: 30dvw;
-    }
-  }
-
   a {
     position: relative;
     text-decoration: none;
@@ -180,7 +250,7 @@ header a.site-logo.shrink {
 h1 {
   text-align: center;
   font-family: "Monoton", cursive;
-  font-size: 4em;
+  font-size: clamp(1.5rem, 5vw, 8rem);
   text-shadow: var(--neon-Blue);
   font-weight: 400;
   line-height: 2em;
@@ -188,8 +258,10 @@ h1 {
 }
 
 h2 {
+  width: 70%;
+  font-family: Delight;
   font-size: 3em;
-  margin: 0 0 1em 0;
+  margin: 0 auto 1em auto;
 }
 
 .flicker-slow {
@@ -226,12 +298,12 @@ h2 {
 /* /////////////////////////////////////////////////////// */
 
 main {
-  width: 70dvw;
-  margin: 4em auto;
+  width: 100dvw;
 }
 
 .date {
-  margin: 8em 0 1em 0;
+  width: 70%;
+  margin: 8em auto 1em auto;
 
   p {
     font-size: 0.8em;
@@ -243,12 +315,13 @@ main {
 /* /////////////////////////////////////////////////////// */
 
 #overMij {
+  width: 70%;
+  margin: 4em auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   height: 100%;
   position: relative;
   gap: 5%;
-  align-items: flex-start;
   justify-content: space-evenly;
   scroll-margin-top: 200px;
 
@@ -257,38 +330,39 @@ main {
     color: var(--text-white);
   }
 
+  a:hover {
+    text-decoration: underline;
+  }
+
   > p {
+    font-size: 1.3em;
     width: 30%;
   }
 
+  p a {
+    color: var(--secundary-color);
+    text-transform: uppercase;
+  }
+
   div {
+    align-items: flex-start;
     width: 25%;
 
     h2 {
       font-size: 2em;
-      margin: 0 0 0.5em 0;
+      width: 100%;
+      margin: 0 0 1em 0;
+      text-decoration: underline;
     }
 
     li {
       display: flex;
-      justify-content: space-around;
-      padding: 1em 0;
+      gap: 1em;
       margin: 1em 0;
-      border: 1px solid var(--secundary-color);
-      border-radius: 8px;
-    }
-
-    li:hover {
-      transform: translateY(2px);
-      box-shadow: #0ff 2px 5px 10px;
     }
 
     a {
       font-size: 1em;
-    }
-
-    a:hover {
-      text-decoration: underline;
     }
   }
 }
@@ -302,7 +376,6 @@ main {
   justify-content: center;
   width: 30dvw;
   height: 40dvh;
-  /* margin: 10rem 0; */
 
   svg {
     position: absolute;
@@ -329,8 +402,6 @@ main {
     position: absolute;
     z-index: 3;
     height: 128px;
-    /* top: 2.8em;
-    left: 4.2em; */
     margin-left: 8.9em;
     margin-top: 2.7em;
     animation: RockArm 2s ease-in-out infinite alternate;
@@ -349,77 +420,19 @@ main {
 }
 
 /* /////////////////////////////////////////////////////// */
-/* ////////////////////// Hackaton /////////////////////// */
-/* /////////////////////////////////////////////////////// */
-
-#hackathon {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  align-items: flex-start;
-  scroll-margin-top: 200px;
-
-  a {
-    text-decoration: none;
-    color: var(--text-white);
-    width: 60%;
-  }
-
-  a h2 {
-    z-index: 2;
-    font-size: 2em;
-    position: absolute;
-    bottom: 0.5em;
-    left: 0.5em;
-  }
-
-  span {
-    height: 4em;
-    width: 60%;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    background-image: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0) 100%
-    );
-    position: absolute;
-    bottom: 4px;
-  }
-
-  img {
-    height: 60dvh;
-    aspect-ratio: 16 / 9;
-    border-radius: 8px;
-    z-index: 1;
-  }
-}
-
-main hr {
-  border: 1px solid white;
-  box-shadow: var(--neon-Blue);
-  width: 90%;
-  margin: 4em auto;
-}
-
-/* /////////////////////////////////////////////////////// */
 /* //////////////////// Weekly Nerds ///////////////////// */
 /* /////////////////////////////////////////////////////// */
 
 #weeklyNerds {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 1em;
   grid-row-gap: 4em;
   justify-content: space-evenly;
   align-items: flex-start;
-  width: 100%;
+  width: 70%;
+  margin: 0 auto;
   scroll-margin-top: 200px;
 
   hr {
@@ -427,43 +440,119 @@ main hr {
     width: 1px;
     margin: auto 0;
   }
-}
 
-article {
-  width: 90%;
+  article {
+    width: 100%;
 
-  a {
     display: flex;
     flex-direction: column;
     align-items: left;
     margin: 0 auto;
     color: var(--text-white);
     text-decoration: none;
-  }
-  h2 {
-    order: 3;
-    font-size: 1.2em;
+
+    h2 {
+      order: 3;
+      font-size: 1.2em;
+      margin: 0;
+    }
+
+    h3 {
+      order: 2;
+      font-size: 0.6em;
+      margin: 8px 0;
+    }
+
+    img {
+      order: 1;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+
+      margin: 0 auto;
+      border-radius: var(--border-radius-small);
+    }
   }
 
-  h3 {
-    order: 2;
-    font-size: 0.6em;
-    margin: 8px 0;
-  }
-
-  img {
-    order: 1;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: fill;
-
-    margin: 0 auto;
-    border-radius: 8px;
+  article:hover img {
+    /* transform: scale(1.1); */
+    border: 10px solid transparent;
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
   }
 }
 
-article:hover {
-  transform: translateY(2px);
+#nerdPopover {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70dvw;
+  height: 80vh;
+  overflow-y: auto;
+  padding: 2em;
+  background-color: #222;
+  color: white;
+  z-index: 9999;
+  display: none;
+  border-radius: var(--border-radius-small);
+
+  h1 {
+    all: unset;
+    font-family: Delight;
+    font-size: 2em;
+    color: var(--text-white);
+    margin: 1em 0;
+    width: 100%;
+  }
+
+  h2,
+  h3 {
+    margin: 1em 0 0.2em 0;
+    font-size: 1.5em;
+  }
+
+  h4 {
+    margin: 1em 0;
+    font-size: 1em;
+  }
+
+  img {
+    width: 40%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--border-radius-small);
+    margin-bottom: 1em;
+  }
+
+  a {
+    color: var(--secundary-color);
+  }
+
+  pre {
+    background-color: #222;
+    padding: 1em;
+    border-radius: var(--border-radius-small);
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+}
+
+#nerdOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  z-index: 9998;
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh; /* prevents scroll caused by tall elements */
 }
 
 /* /////////////////////////////////////////////////////// */
@@ -471,16 +560,21 @@ article:hover {
 /* /////////////////////////////////////////////////////// */
 
 #projecten {
+  width: 70%;
+  margin: 0 auto;
+
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1em;
+  justify-content: center;
+  gap: 2em;
   scroll-margin-top: 200px;
 
   img {
     cursor: pointer;
     height: 20dvw;
-    border-radius: 8px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: var(--border-radius-small);
   }
 }
 
@@ -497,7 +591,7 @@ article:hover {
 .popover iframe {
   width: 100%;
   height: 100%;
-  border-radius: 4px;
+  border-radius: var(--border-radius-small);
   border: none;
 }
 
@@ -527,7 +621,7 @@ article:hover {
   top: -35px;
   left: -35px;
   font-size: 18px;
-  border-radius: 4px;
+  border-radius: var(--border-radius-small);
   cursor: pointer;
   background: crimson;
   color: white;
@@ -541,23 +635,20 @@ article:hover {
 /* /////////////////////////////////////////////////////// */
 
 #reflectie {
+  width: 70%;
+  margin: 4em auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 1em;
 
   scroll-margin-top: 200px;
 
   article {
     width: 49%;
-    background-color: rgba(0, 255, 255, 0.2);
-    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius-small);
     padding: 1em;
-  }
-
-  article:hover {
-    transform: translateY(2px);
-    box-shadow: #0ff 2px 5px 10px;
   }
 
   .leerdoel {
@@ -567,7 +658,7 @@ article:hover {
   h2 {
     width: 100%;
     font-size: 2em;
-    margin: 0 0 1em 0;
+    margin: 3em 0 1em 0;
   }
 
   h3 {
