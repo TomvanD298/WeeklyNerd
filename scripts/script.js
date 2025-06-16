@@ -24,6 +24,14 @@ hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
 
+// Close menu on link click
+document.querySelectorAll("#navMenu a").forEach((link) => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+  });
+});
+
 /* /////////////////////////////////////////////////////// */
 /* ///////////////////// Pop-Over //////////////////////// */
 /* /////////////////////////////////////////////////////// */
@@ -61,7 +69,7 @@ overlay.addEventListener("click", closePopover);
 /* ////////////////// NERD Pop-Over ////////////////////// */
 /* /////////////////////////////////////////////////////// */
 
-fetch("./weeklyNerds.json")
+fetch("../weeklyNerds.json")
   .then((res) => res.json())
   .then((nerds) => {
     const container = document.getElementById("weeklyNerds");
