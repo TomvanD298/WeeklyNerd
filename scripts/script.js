@@ -69,7 +69,7 @@ overlay.addEventListener("click", closePopover);
 /* ////////////////// NERD Pop-Over ////////////////////// */
 /* /////////////////////////////////////////////////////// */
 
-fetch("../weeklyNerds.json")
+fetch("../weekly-nerds.json")
   .then((res) => res.json())
   .then((nerds) => {
     const container = document.getElementById("weeklyNerds");
@@ -93,7 +93,7 @@ fetch("../weeklyNerds.json")
 
 let nerdData = [];
 
-fetch("./weeklyNerds.json")
+fetch("../weekly-nerds.json")
   .then((res) => res.json())
   .then((data) => {
     nerdData = data;
