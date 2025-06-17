@@ -13,6 +13,11 @@
   src: url(./assets/fonts/Delight/Web-TT/Delight-Medium.ttf);
 }
 
+@font-face {
+  font-family: Delight-light;
+  src: url(./assets/fonts/Delight/Web-TT/Delight-Light.ttf);
+}
+
 :root {
   --primary-color: #3bd26c;
   --secundary-color: #0ff;
@@ -29,7 +34,6 @@
 
 html {
   scroll-behavior: smooth;
-
   scrollbar-color: var(--secundary-color) #222;
 }
 
@@ -53,7 +57,7 @@ canvas {
   left: 0;
   display: block;
   z-index: -1;
-  filter: blur(3px);
+  filter: blur(4px);
 }
 
 main hr {
@@ -64,7 +68,7 @@ main hr {
 }
 
 p {
-  font-weight: 100;
+  font-family: delight-light, Helvetica, sans-serif;
 }
 /* /////////////////////////////////////////////////////// */
 /* /////////////////////// Header //////////////////////// */
@@ -646,8 +650,6 @@ main {
 
   article {
     width: 49%;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: var(--border-radius-small);
     padding: 1em;
   }
 
@@ -664,5 +666,9 @@ main {
   h3 {
     font-size: 1.5em;
     margin: 0 0 1em 0;
+  }
+  h4 {
+    font-size: 1.2em;
+    margin: 1em 0 0.2em 0;
   }
 }

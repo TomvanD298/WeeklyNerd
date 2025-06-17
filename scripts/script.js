@@ -54,12 +54,14 @@ triggers.forEach((trigger) => {
     // Show popover
     popover.style.display = "block";
     overlay.style.display = "block";
+    document.body.classList.add("no-scroll");
   });
 });
 
 function closePopover() {
   popover.style.display = "none";
   overlay.style.display = "none";
+  document.body.classList.remove("no-scroll");
   iframe.src = ""; // Stop loading when closed
 }
 
