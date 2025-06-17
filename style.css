@@ -44,6 +44,7 @@ html {
 }
 
 body {
+  width: 100dvw;
   font-family: Delight, Helvetica, sans-serif;
   background-color: var(--background-color);
   color: var(--text-white);
@@ -51,25 +52,6 @@ body {
   scroll-behavior: smooth;
 }
 
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: block;
-  z-index: -1;
-  filter: blur(4px);
-}
-
-main hr {
-  border: 1px solid white;
-  box-shadow: var(--neon-Blue);
-  width: 70%;
-  margin: 6em auto;
-}
-
-p {
-  font-family: delight-light, Helvetica, sans-serif;
-}
 /* /////////////////////////////////////////////////////// */
 /* /////////////////////// Header //////////////////////// */
 /* /////////////////////////////////////////////////////// */
@@ -128,7 +110,7 @@ p {
   transform: scale(0.95);
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 1000;
+  z-index: 99;
 }
 
 #navMenu ul {
@@ -179,15 +161,6 @@ header {
     text-align: start;
   }
 
-  img {
-    width: 10%;
-    margin: 0 2rem;
-  }
-
-  img:first-of-type {
-    transform: scaleX(-1);
-  }
-
   hr {
     border: 1px solid white;
     box-shadow: var(--neon-Blue);
@@ -198,13 +171,17 @@ header {
     display: flex;
     align-items: center;
     height: 3px;
-    color: var(--text-white);
-    font-family: "Monoton", cursive;
-    font-size: 4em;
-    text-shadow: var(--neon-Blue);
-    font-weight: 400;
-    line-height: 2em;
-    letter-spacing: 8px;
+
+    p {
+      color: var(--text-white);
+      font-family: "Monoton", cursive;
+      font-size: clamp(1.5rem, 5vw, 8rem);
+      text-shadow: var(--neon-Blue);
+      font-weight: 400;
+      line-height: 2em;
+      letter-spacing: 8px;
+      width: fit-content;
+    }
 
     hr {
       width: 100px;
@@ -232,22 +209,6 @@ header {
       grid-area: 1 / 2 / 2 / 3;
       text-align: end;
     }
-  }
-}
-
-header a.site-logo {
-  transition: all 0.3s ease-in-out;
-}
-
-header a.site-logo.shrink {
-  position: fixed;
-  transform: scale(0.3);
-  z-index: 10;
-
-  margin: -8em auto 0 auto;
-
-  div {
-    display: none;
   }
 }
 
@@ -297,12 +258,88 @@ h2 {
   }
 }
 
+@media (max-width: 768px) {
+  #hamburger {
+    top: 1rem;
+    left: 1rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  #hamburger.active span:nth-child(1) {
+    transform: translateY(1.1em) rotate(45deg);
+  }
+
+  #hamburger.active span:nth-child(3) {
+    transform: translateY(-1.1em) rotate(-45deg);
+  }
+
+  #navMenu {
+    top: 4rem;
+    left: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  header {
+    width: 100dvw;
+  }
+
+  header a {
+    width: 100%;
+    font-size: 1.2rem;
+    flex-direction: column;
+    margin: 4em 0 0 0;
+  }
+
+  header img {
+    width: 30%;
+    margin: 1rem auto;
+  }
+
+  header div {
+    width: 80%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  header div p {
+    text-align: flex-start;
+    font-size: 0.7em;
+  }
+
+  header #bottomLine {
+    width: 80%;
+    margin-top: 1em;
+  }
+}
+
 /* /////////////////////////////////////////////////////// */
 /* ///////////////////////// Main //////////////////////// */
 /* /////////////////////////////////////////////////////// */
 
 main {
-  width: 100dvw;
+  width: 100%;
+}
+
+main hr {
+  border: 1px solid white;
+  box-shadow: var(--neon-Blue);
+  width: 70%;
+  margin: 6em auto;
+}
+
+canvas {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: -1;
+  filter: blur(4px);
+}
+
+p {
+  font-family: delight-light, Helvetica, sans-serif;
 }
 
 .date {
@@ -311,6 +348,22 @@ main {
 
   p {
     font-size: 0.8em;
+  }
+}
+
+@media (max-width: 768px) {
+  main hr {
+    width: 60%;
+  }
+
+  .date {
+    width: 100%;
+    margin: 1em auto 1em auto;
+  }
+
+  h2 {
+    width: 80%;
+    font-size: 2em;
   }
 }
 
@@ -423,6 +476,50 @@ main {
   }
 }
 
+@media (max-width: 768px) {
+  #overMij {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    width: 80%;
+    margin: 2em auto;
+  }
+
+  #overMij > p,
+  #overMij div {
+    text-align: center;
+    width: 100%;
+    font-size: 1em;
+  }
+
+  .aboutImage {
+    grid-area: 1 / 1 / 2 / 2;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 30dvw;
+    height: 40dvh;
+
+    svg {
+      position: absolute;
+      height: 300px;
+      z-index: 1;
+      opacity: 0.5;
+    }
+  }
+
+  .cartoonTom img {
+    height: 250px;
+  }
+
+  .cartoonTom img:nth-of-type(2) {
+    margin-left: 5em;
+    margin-top: 2em;
+    height: 80px;
+  }
+}
 /* /////////////////////////////////////////////////////// */
 /* //////////////////// Weekly Nerds ///////////////////// */
 /* /////////////////////////////////////////////////////// */
@@ -559,6 +656,27 @@ main {
   height: 100vh; /* prevents scroll caused by tall elements */
 }
 
+@media (max-width: 768px) {
+  #weeklyNerds {
+    grid-template-columns: 1fr;
+    grid-row-gap: 2em;
+  }
+
+  #weeklyNerds article img {
+    width: 100%;
+  }
+
+  #nerdPopover {
+    width: 90vw;
+    height: 90vh;
+    padding: 1em;
+  }
+
+  #nerdPopover img {
+    width: 100%;
+  }
+}
+
 /* /////////////////////////////////////////////////////// */
 /* ////////////////////// Projects /////////////////////// */
 /* /////////////////////////////////////////////////////// */
@@ -634,6 +752,26 @@ main {
   z-index: 10000;
 }
 
+@media (max-width: 768px) {
+  #projecten img {
+    width: 80%;
+    height: auto;
+  }
+
+  .popover.desktop,
+  .popover.phone {
+    width: 90vw;
+    height: auto;
+    aspect-ratio: auto;
+  }
+
+  .close-btn {
+    top: -20px;
+    left: -20px;
+    font-size: 14px;
+  }
+}
+
 /* /////////////////////////////////////////////////////// */
 /* ///////////////////// Reflectie /////////////////////// */
 /* /////////////////////////////////////////////////////// */
@@ -670,5 +808,28 @@ main {
   h4 {
     font-size: 1.2em;
     margin: 1em 0 0.2em 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #reflectie {
+    width: 90%;
+  }
+
+  #reflectie article {
+    width: 100%;
+    padding: 0.5em;
+  }
+
+  #reflectie h2 {
+    font-size: 1.5em;
+  }
+
+  #reflectie h3 {
+    font-size: 1.2em;
+  }
+
+  #reflectie h4 {
+    font-size: 1em;
   }
 }
